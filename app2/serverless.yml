@@ -1,0 +1,19 @@
+# serverless.yml
+
+service: my-express-application
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: ""
+  region: eu-north-1
+
+functions:
+  app:
+    handler: index.handler
+    events:
+    - http: ANY /
+    - http: ANY /kala
+    - http: ANY /kana
+    - http: ANY /kana2
+    - http: 'ANY {proxy+}'

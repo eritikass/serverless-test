@@ -1,0 +1,15 @@
+# serverless.yml
+
+service: serverless-geo-country
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: stable
+  region: eu-north-1
+
+functions:
+  handler:
+    handler: handler.country
+    events:
+    - http: ANY /
