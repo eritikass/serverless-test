@@ -1,0 +1,17 @@
+# serverless.yml
+
+service: readfile-test-app
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: "x23"
+  region: eu-north-1
+
+functions:
+  frontpage:
+    handler: handler.frontpage
+    events:
+    - http:
+        path: /
+        method: get
