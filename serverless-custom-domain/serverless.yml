@@ -1,0 +1,23 @@
+# serverless.yml
+
+service: serverless-http
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: eu-north-1
+  memorySize: 512
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+    - http:
+        path: hello
+        method: get
+  goodbye:
+    handler: handler.goodbye
+    events:
+    - http:
+        path: goodbye
+        method: get
