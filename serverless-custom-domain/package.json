@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "deploy": "yarn run serverless deploy -v",
+    "remove": "yarn run serverless remove -v",
+    "create_domain": "yarn run serverless create_domain"
+  },
+  "devDependencies": {
+    "serverless": "^1.36.3",
+    "serverless-domain-manager": "^2.6.13"
+  }
+}

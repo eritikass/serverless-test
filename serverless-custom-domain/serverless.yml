@@ -21,3 +21,14 @@ functions:
     - http:
         path: goodbye
         method: get
+
+plugins:
+- serverless-domain-manager
+
+custom:
+  customDomain:
+    domainName: 'serverless-test.MY-DOMAIN-NAME-HERE.net'
+    basePath: ''
+    certificateName: 'MY-DOMAIN-NAME-HERE.net'
+    stage: ${self:provider.stage}
+    createRoute53Record: true
